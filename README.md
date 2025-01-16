@@ -16,13 +16,13 @@ After merging your pull request, you can easily delete your local branch using t
 
 ### macOS & Linux
 ```bash
-git clone https://github.com/e-vural/git-shortcut-jira-bitbucket.git ~/.my-git-automate
+git clone https://github.com/e-vural/git-shortcut-jira-bitbucket.git ~/.my-git-automate &&
+ 
+echo "alias c='bash ~/.my-git-automate/commit.sh'" >> ~/.zshrc &&
 
-echo "alias c='bash ~/.my-git-automate/commit.sh'" >> ~/.zshrc
+echo "alias p='bash ~/.my-git-automate/push.sh'" >> ~/.zshrc &&
 
-echo "alias p='bash ~/.my-git-automate/push.sh'" >> ~/.zshrc
-
-echo "alias pr='bash ~/.my-git-automate/after_pull_request_merge.sh'" >> ~/.zshrc
+echo "alias pr='bash ~/.my-git-automate/after_pull_request_merge.sh'" >> ~/.zshrc &&
 
 source ~/.zshrc
 ```
