@@ -1,29 +1,28 @@
 # git-shortcut-jira-bitbucket
-Create task on Jira , create branch from that task add commit , push , pull request
+Create task on Jira, create branch from that task, add commit, push, and create pull request
 
+## Scripts
 
-## commit.sh
+### commit.sh
+This file allows you to commit easily. You can make commits in a single step using an alias you specify.
 
-Bu dosya kolayca commit atmanızı sağlar. Belirleyeceğiniz bir alias ile tek hamlede commit atabilirsiniz. 
+### push.sh
+With this file, you can quickly push to your current branch.
 
-## push.sh
+### after_pull_request_merge.sh
+After merging your pull request, you can easily delete your local branch using this file.
 
-Bu dosya ile hızlıca bulunduğunuz brancha push atabilirsiniz.
+## Installation
 
-## after_pull_request_merge.sh
+### macOS & Linux
+```bash
+git clone https://github.com/e-vural/git-shortcut-jira-bitbucket.git ~/.my-git-automate
 
-Bu dosya ile pull requestinizi merge yaptıktan sonra kolayca local branchınızı silebilirsiniz.
+echo "alias c='bash ~/.my-git-automate/commit.sh'" >> ~/.zshrc
 
+echo "alias p='bash ~/.my-git-automate/push.sh'" >> ~/.zshrc
 
-# Installation
+echo "alias pr='bash ~/.my-git-automate/after_pull_request_merge.sh'" >> ~/.zshrc
 
-### MACOS & LINUX
-    git clone https://github.com/e-vural/git-shortcut-jira-bitbucket.git ~/.my-git-automate
-
-    echo "alias c='bash ~/.my-git-automate/commit.sh'" >> ~/.zshrc
-
-    echo "alias p='bash ~/.my-git-automate/push.sh'" >> ~/.zshrc
-
-    echo "alias pr='bash ~/.my-git-automate/after_pull_request_merge.sh'" >> ~/.zshrc
-
-    source ~/.zshrc
+source ~/.zshrc
+```
